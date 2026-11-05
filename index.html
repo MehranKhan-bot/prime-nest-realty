@@ -1,0 +1,543 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover exceptional properties with PrimeNest Realty. Find your dream home in Pakistan.">
+
+    <title>PrimeNest Realty | Find Your Dream Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Prime<span>Nest</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#properties" class="nav-btn">
+                Explore Properties
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                type="button">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-subtitle">
+                FIND YOUR PERFECT PLACE
+            </p>
+
+            <h1>
+                Discover a Place
+                You'll Love to
+                <span>Call Home</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore exceptional properties and find the
+                perfect home for your lifestyle. Your dream
+                property is just one step away.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#properties" class="primary-btn">
+                    Explore Properties
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900"
+                alt="Beautiful modern luxury house">
+
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-subtitle">
+                ABOUT PRIME NEST
+            </p>
+
+            <h2>
+                Helping You Find
+                <span>Your Dream Home</span>
+            </h2>
+
+            <p>
+                At PrimeNest Realty, we believe finding a home
+                should be an exciting experience. Our team is
+                dedicated to helping you discover properties
+                that match your lifestyle and budget.
+            </p>
+
+            <p>
+                Whether you are buying, selling, or investing,
+                we provide professional guidance at every step.
+            </p>
+
+            <a href="#contact" class="primary-btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROPERTIES SECTION -->
+    <section class="properties" id="properties">
+
+        <div class="section-heading">
+
+            <p class="section-subtitle">
+                OUR PROPERTIES
+            </p>
+
+            <h2>
+                Explore Our Featured Properties
+            </h2>
+
+            <p>
+                Discover beautiful homes selected for your comfort
+                and lifestyle.
+            </p>
+
+        </div>
+
+
+        <!-- PROPERTY SEARCH -->
+        <div class="property-search">
+
+            <input
+                type="text"
+                id="locationSearch"
+                placeholder="Enter city or location..."
+                aria-label="Search property by location">
+
+            <select
+                id="propertyType"
+                aria-label="Select property type">
+
+                <option value="all">All Properties</option>
+                <option value="sale">For Sale</option>
+                <option value="rent">For Rent</option>
+
+            </select>
+
+            <button type="button" id="searchBtn">
+                Search Properties
+            </button>
+
+        </div>
+
+
+        <!-- RESULTS COUNTER -->
+        <p id="resultsCount" class="results-count">
+            Showing 3 properties
+        </p>
+
+
+        <!-- PROPERTY CARDS -->
+        <div class="property-container">
+
+
+            <!-- PROPERTY 1 -->
+            <div
+                class="property-card"
+                data-type="sale"
+                data-location="Islamabad">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800"
+                    alt="Modern luxury villa in Islamabad">
+
+                <div class="property-info">
+
+                    <span class="property-type">
+                        For Sale
+                    </span>
+
+                    <h3>
+                        Modern Luxury Villa
+                    </h3>
+
+                    <p>
+                        Islamabad, Pakistan
+                    </p>
+
+                    <h4>
+                        Rs. 4.5 Crore
+                    </h4>
+
+                    <a href="#contact" class="property-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROPERTY 2 -->
+            <div
+                class="property-card"
+                data-type="sale"
+                data-location="Lahore">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+                    alt="Contemporary family home in Lahore">
+
+                <div class="property-info">
+
+                    <span class="property-type">
+                        For Sale
+                    </span>
+
+                    <h3>
+                        Contemporary Family Home
+                    </h3>
+
+                    <p>
+                        Lahore, Pakistan
+                    </p>
+
+                    <h4>
+                        Rs. 2.8 Crore
+                    </h4>
+
+                    <a href="#contact" class="property-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROPERTY 3 -->
+            <div
+                class="property-card"
+                data-type="rent"
+                data-location="Karachi">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800"
+                    alt="Elegant modern apartment in Karachi">
+
+                <div class="property-info">
+
+                    <span class="property-type">
+                        For Rent
+                    </span>
+
+                    <h3>
+                        Elegant Modern Apartment
+                    </h3>
+
+                    <p>
+                        Karachi, Pakistan
+                    </p>
+
+                    <h4>
+                        Rs. 120,000 / Month
+                    </h4>
+
+                    <a href="#contact" class="property-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NO RESULTS MESSAGE -->
+        <p id="noResults" class="no-results">
+            No properties found. Please try another search.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+
+        <div class="section-heading">
+
+            <p class="section-subtitle">
+                WHAT WE OFFER
+            </p>
+
+            <h2>
+                Our Professional Services
+            </h2>
+
+            <p>
+                Everything you need for a successful real estate journey.
+            </p>
+
+        </div>
+
+
+        <div class="services-container">
+
+
+            <!-- SERVICE 1 -->
+            <div class="service-card">
+
+                <div class="service-icon">🏡</div>
+
+                <h3>
+                    Buy a Property
+                </h3>
+
+                <p>
+                    Find your perfect home from our carefully
+                    selected property listings.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICE 2 -->
+            <div class="service-card">
+
+                <div class="service-icon">🔑</div>
+
+                <h3>
+                    Sell a Property
+                </h3>
+
+                <p>
+                    Get professional assistance to sell your
+                    property at the right price.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICE 3 -->
+            <div class="service-card">
+
+                <div class="service-icon">📈</div>
+
+                <h3>
+                    Property Investment
+                </h3>
+
+                <p>
+                    Explore investment opportunities and make
+                    informed real estate decisions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+
+            <p class="section-subtitle">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Let's Find Your Dream Property
+            </h2>
+
+            <p>
+                Have questions? Our team is ready to help you.
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-info">
+
+                <h3>
+                    Contact Information
+                </h3>
+
+                <p>📍 Islamabad, Pakistan</p>
+
+                <p>📞 +92 300 1234567</p>
+
+                <p>✉️ info@primenest.com</p>
+
+                <p>🕒 Monday – Saturday: 9 AM – 6 PM</p>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form">
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Subject"
+                        required>
+
+                    <textarea
+                        id="message"
+                        placeholder="Your Message"
+                        rows="5"
+                        required></textarea>
+
+                    <button type="submit" class="primary-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- FOOTER ABOUT -->
+            <div class="footer-box">
+
+                <h2>
+                    Prime<span>Nest</span>
+                </h2>
+
+                <p>
+                    Helping you discover exceptional properties
+                    and find a place to call home.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-box">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#properties">Properties</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <!-- CONTACT DETAILS -->
+            <div class="footer-box">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>Islamabad, Pakistan</p>
+                <p>+92 300 1234567</p>
+                <p>info@primenest.com</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 PrimeNest Realty. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
+

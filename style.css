@@ -1,0 +1,859 @@
+/* =================================
+   1. GLOBAL STYLING
+================================= */
+
+:root {
+    --primary-color: #142B45;
+    --secondary-color: #C9A45C;
+    --background-color: #F5F7FA;
+    --text-color: #333333;
+    --white-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+/* Keyboard focus (accessibility) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+header {
+    width: 100%;
+    background-color: var(--white-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    min-height: 85px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(10, 25, 45, 0.65),
+            rgba(10, 25, 45, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600")
+        center/cover no-repeat;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    color: var(--secondary-color);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--secondary-color);
+}
+
+.hero-description {
+    font-size: 17px;
+    color: #eeeeee;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+/* =================================
+   4. ABOUT SECTION
+================================= */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: var(--white-color);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.section-subtitle {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about-content h2 span {
+    color: var(--secondary-color);
+}
+
+.about-content p {
+    color: #666666;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.about-content .primary-btn {
+    margin-top: 10px;
+}
+
+/* The About button sits on a white background, so keep its text visible on hover */
+.about-content .primary-btn:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+
+/* =================================
+   5. PROPERTIES SECTION
+================================= */
+
+.properties {
+    background-color: var(--background-color);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #666666;
+}
+
+.property-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.property-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card[hidden] {
+    display: none;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
+}
+
+.property-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 25px;
+}
+
+.property-type {
+    display: inline-block;
+    background-color: #e9f0f7;
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.property-info h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.property-info p {
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.property-info h4 {
+    color: var(--secondary-color);
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.property-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.property-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* =================================
+   6. PROPERTY SEARCH BAR
+================================= */
+
+.property-search {
+    max-width: 1000px;
+    margin: 0 auto 45px;
+
+    display: flex;
+    gap: 15px;
+
+    background-color: white;
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.property-search input,
+.property-search select {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.property-search button {
+    padding: 14px 22px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.property-search button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Results counter */
+.results-count {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* No results message (shown by script.js) */
+.no-results {
+    display: none;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px 15px;
+}
+
+
+/* =================================
+   7. SERVICES SECTION
+================================= */
+
+.services {
+    background-color: var(--white-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 40px 25px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666666;
+    font-size: 15px;
+}
+
+
+/* =================================
+   8. CONTACT SECTION
+================================= */
+
+.contact {
+    background-color: var(--background-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-info {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--secondary-color);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* The Send button sits on a white background, so keep its text visible on hover */
+.contact-form .primary-btn:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+/* Form status message (created by script.js) */
+.form-message {
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-message.success {
+    background-color: #e6f4ea;
+    color: #1e6b34;
+}
+
+.form-message.error {
+    background-color: #fdecea;
+    color: #a12622;
+}
+
+
+/* =================================
+   9. FOOTER SECTION
+================================= */
+
+.footer {
+    background-color: #102238;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.footer-box h2 span {
+    color: var(--secondary-color);
+}
+
+.footer-box h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.footer-box p {
+    color: #cccccc;
+    margin-bottom: 12px;
+}
+
+.footer-box a {
+    display: block;
+    color: #cccccc;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #34475c;
+    padding-top: 20px;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+
+/* =================================
+   10. TABLET (max-width: 992px)
+================================= */
+
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .about {
+        gap: 35px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .property-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+
+}
+
+
+/* =================================
+   11. MOBILE (max-width: 768px)
+================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+        padding: 20px 5%;
+        gap: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 550px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* ABOUT */
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    /* PROPERTIES */
+
+    .property-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* SERVICES */
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* CONTACT */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
+
+
+/* =================================
+   12. SEARCH BAR ON SMALL SCREENS
+================================= */
+
+@media (max-width: 600px) {
+
+    .property-search {
+        flex-direction: column;
+    }
+
+    .property-search input,
+    .property-search select,
+    .property-search button {
+        width: 100%;
+    }
+
+}
+
+
+/* =================================
+   13. SMALL MOBILE (max-width: 480px)
+================================= */
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+}
